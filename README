@@ -1,0 +1,28 @@
+======
+README
+======
+
+This demo replicates my problem with `suwsgi` - backend node closes suwsgi
+connection without any apparent reason.
+
+Usage
+=====
+
+Run FastRouter with `suwsgi` backend: ::
+
+   uwsgi --ini demo.ini
+
+
+Testing
+=======
+::
+   $ curl http://localhost:10000
+   curl: (52) Empty reply from server
+
+
+Extras
+======
+
+Alternatively, use simplified configuration (without FastRouter and subscription server): ::
+
+   uwsgi --ini demo-no-subscription-server.ini
